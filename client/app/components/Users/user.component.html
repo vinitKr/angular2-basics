@@ -1,0 +1,21 @@
+<div>
+    <h2>Users</h2>
+    <span><p>welcome {{newUser? newUser.name : 'guest' }}</p>
+    <button (click)="logout()">logout</button></span><br>
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="user.name">
+    <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email">
+    <button type="submit" (click)="onclick(user)">Add</button>
+
+    <div *ngIf="users.length >0">
+        <ul>
+            <li *ngFor="let u of users">
+                <span (click)="showUser(u)">{{u.name}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="currentUser">
+        <span>{{currentUser.name}}</span><br>
+        <span>{{currentUser.email}}</span>
+    </div>
+</div>

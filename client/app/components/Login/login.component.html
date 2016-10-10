@@ -1,0 +1,11 @@
+<div>
+    <h2>Login</h2>
+    <input type="text" placeholder="Name" [(ngModel)]="user.name" name="name">
+    <input type="text" placeholder="Email" [(ngModel)]="user.email" name="email">
+    <button type="submit" (click)="login(user)">login</button>
+    <br>
+    or Click here for <button type="button" (click)="signup()" > Signup </button>
+    <br>
+    <p>{{message}}</p>
+
+</div>
