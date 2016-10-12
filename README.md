@@ -1,5 +1,4 @@
 # angular2-basics
-======================
 This is a basic example of angular 2.
 included: 
 - components
